@@ -1,0 +1,293 @@
+/* ********** Custom Properties ********** */
+:root {
+  --first-color: #566dd4;
+  --second-color: #4a7ab2;
+  --third-color: #b47cae;
+  --first-detail-color: #ff238e;
+  --second-detail-color: #f8ce08;
+  --white-color: #fff;
+}
+
+/* ********** Reset ********** */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--second-color);
+  /* height: 100vh; */
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+/* ********** Components ********** */
+
+/* Header */
+.header {
+  height: 4rem;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.header-container > h1 {
+  color: var(--white-color);
+}
+
+/* Form */
+
+.rating-form h2 {
+  font-size: 1rem;
+}
+
+.rating-form ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rating-form ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-form ul li input[type="radio"] {
+  margin: 0;
+  display: none;
+}
+
+.rating-form ul li label {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.rating-form ul label:hover {
+  background-color: rgba(255, 35, 142);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.rating-form ul li input[type="radio"]:checked + label {
+  background-color: rgba(255, 35, 142);
+  color: var(--white-color);
+}
+
+.text-review {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-review > input[type="text"] {
+  height: 2rem;
+  width: 75%;
+  border: 0;
+  border-bottom: thin var(--third-color) solid;
+  padding-left: 8px;
+}
+
+.text-review .btn {
+  width: 20%;
+}
+
+/* min-width: 19.5rem;
+  min-height: 16rem; */
+
+/* Card */
+.card {
+  background-color: var(--white-color);
+}
+
+/* Message */
+
+.message {
+  margin-top: 5px;
+  text-align: center;
+  background-color: red;
+  color: var(--white-color);
+}
+
+/* Stats */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white-color);
+}
+
+/* Feedbacks */
+
+.num-display {
+  display: flex;
+  flex-direction: column;
+}
+.num-display > * {
+  margin-bottom: 0.5rem;
+}
+
+.actions-buttons .btn {
+  width: 4rem;
+  margin-left: 1rem;
+}
+
+.actions-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-display {
+  margin-bottom: 1rem;
+  text-align: justify;
+  word-wrap: break-word;
+  min-height: 9rem;
+}
+
+.feedback {
+  margin-bottom: 1.5rem;
+  min-height: 16rem;
+  min-width: 19.5rem;
+}
+
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+}
+
+/* About */
+.about {
+  text-align: right;
+}
+
+.about svg {
+  fill: var(--white-color);
+}
+
+/* ********** Utilities ********** */
+.bold {
+  font-weight: bold;
+}
+.ta-end {
+  text-align: end;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.white-color {
+  color: var(--white-color);
+}
+/* ********** Site Styles ********** */
+.feedback-container {
+  background-color: var(--second-color);
+}
+
+.btn {
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: auto;
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.btn-primary {
+  background-color: var(--first-detail-color);
+  color: var(--white-color);
+  font-size: small;
+}
+
+.btn-delete {
+  background-color: var(--second-detail-color);
+  color: var(--white-color);
+  font-size: small;
+}
+
+.container {
+  padding: 0.5rem 1.5rem;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0.5rem 3rem;
+  }
+
+  .feedback {
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1060px) {
+}

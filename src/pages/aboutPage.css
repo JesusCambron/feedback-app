@@ -1,0 +1,22 @@
+.about-page .card h2 {
+  margin-bottom: 1rem;
+}
+
+.about-page .card p {
+  text-align: justify;
+}
+.about-page a {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 0;
+}
+.about-page svg {
+  fill: var(--first-detail-color);
+}
+
+@media screen and (min-width: 768px) {
+  .about-page {
+    padding: 3rem 5rem;
+  }
+}
